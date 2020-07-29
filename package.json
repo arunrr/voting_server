@@ -1,0 +1,27 @@
+{
+  "name": "voting_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require babel-register --recursive --require ./test/test_helper.js --recursive",
+    "test:watch": "yarn test -- --watch"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-immutable": "^2.1.0",
+    "mocha": "^8.0.1"
+  },
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12"
+  }
+}
