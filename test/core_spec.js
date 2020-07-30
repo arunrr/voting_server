@@ -100,35 +100,27 @@ describe("application logic", () => {
   describe("vote", () => {
     it("creates a tally for the voted entry", () => {
       const state = Map({
-        vote: Map({
-          pair: List.of("Man of Steel", "Iron Man"),
-        }),
-        entries: List.of("Life"),
+        pair: List.of("Man of Steel", "Iron Man"),
       });
 
       const nextState = vote(state, "Man of Steel");
 
       expect(nextState).to.equal(
         Map({
-          vote: Map({
-            pair: List.of("Man of Steel", "Iron Man"),
-            tally: Map({
-              "Man of Steel": 1,
-            }),
+          pair: List.of("Man of Steel", "Iron Man"),
+          tally: Map({
+            "Man of Steel": 1,
           }),
-          entries: List.of("Life"),
         })
       );
     }); //end create tally
 
     it("adds tally to existing vote entries", () => {
       const state = Map({
-        vote: Map({
-          pair: List.of("Man of Steel", "Iron Man"),
-          tally: Map({
-            "Man of Steel": 3,
-            "Iron Man": 2,
-          }),
+        pair: List.of("Man of Steel", "Iron Man"),
+        tally: Map({
+          "Man of Steel": 3,
+          "Iron Man": 2,
         }),
       });
 
@@ -136,12 +128,10 @@ describe("application logic", () => {
 
       expect(nextState).to.equal(
         Map({
-          vote: Map({
-            pair: List.of("Man of Steel", "Iron Man"),
-            tally: Map({
-              "Man of Steel": 4,
-              "Iron Man": 2,
-            }),
+          pair: List.of("Man of Steel", "Iron Man"),
+          tally: Map({
+            "Man of Steel": 4,
+            "Iron Man": 2,
           }),
         })
       );
