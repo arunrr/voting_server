@@ -1,6 +1,7 @@
-const { reducer } = require("../src/reducer");
-const { expect } = require("chai");
-const { Map, fromJS, List } = require("immutable");
+import { expect } from "chai";
+import { Map, fromJS, List } from "immutable";
+
+import { reducer } from "../src/reducer";
 
 describe("reducer", () => {
   it("handles SET_ENTRIES", () => {
